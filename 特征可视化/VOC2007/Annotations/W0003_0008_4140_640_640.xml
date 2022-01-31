@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotation>
+	<folder>W0003</folder>
+	<filename>W0003_0008.png</filename>
+	<source>
+		
+		
+		<database>Unknown</database>
+		
+	
+	</source>
+	<size>
+		
+		
+		<width>640</width>
+		
+		
+		<height>640</height>
+		
+		
+		<depth>1</depth>
+		
+	
+	</size>
+	<segmented>0</segmented>
+	<object>
+		
+		
+		<name>气孔</name>
+		
+		
+		<pose>Unspecified</pose>
+		
+		
+		<truncated>0</truncated>
+		
+		
+		<difficult>0</difficult>
+		
+		
+		<bndbox>
+			
+			
+			<xmin>65</xmin>
+			
+			
+			<ymin>320</ymin>
+			
+			
+			<xmax>414</xmax>
+			
+			
+			<ymax>438</ymax>
+			
+		
+		</bndbox>
+		
+	
+	</object>
+	<object>
+		
+		
+		<name>气孔</name>
+		
+		
+		<pose>Unspecified</pose>
+		
+		
+		<truncated>0</truncated>
+		
+		
+		<difficult>0</difficult>
+		
+		
+		<bndbox>
+			
+			
+			<xmin>534</xmin>
+			
+			
+			<ymin>248</ymin>
+			
+			
+			<xmax>573</xmax>
+			
+			
+			<ymax>295</ymax>
+			
+		
+		</bndbox>
+		
+	
+	</object>
+	<object>
+		
+		
+		<name>气孔</name>
+		
+		
+		<pose>Unspecified</pose>
+		
+		
+		<truncated>0</truncated>
+		
+		
+		<difficult>0</difficult>
+		
+		
+		<bndbox>
+			
+			
+			<xmin>597</xmin>
+			
+			
+			<ymin>446</ymin>
+			
+			
+			<xmax>640</xmax>
+			
+			
+			<ymax>487</ymax>
+			
+		
+		</bndbox>
+		
+	
+	</object>
+	<object>
+		
+		
+		<name>气孔</name>
+		
+		
+		<pose>Unspecified</pose>
+		
+		
+		<truncated>0</truncated>
+		
+		
+		<difficult>0</difficult>
+		
+		
+		<bndbox>
+			
+			
+			<xmin>612</xmin>
+			
+			
+			<ymin>311</ymin>
+			
+			
+			<xmax>638</xmax>
+			
+			
+			<ymax>344</ymax>
+			
+		
+		</bndbox>
+		
+	
+	</object>
+	<object>
+		
+		
+		<name>气孔</name>
+		
+		
+		<pose>Unspecified</pose>
+		
+		
+		<truncated>0</truncated>
+		
+		
+		<difficult>0</difficult>
+		
+		
+		<bndbox>
+			
+			
+			<xmin>589</xmin>
+			
+			
+			<ymin>358</ymin>
+			
+			
+			<xmax>618</xmax>
+			
+			
+			<ymax>389</ymax>
+			
+		
+		</bndbox>
+		
+	
+	</object>
+	<object>
+		
+		
+		<name>气孔</name>
+		
+		
+		<pose>Unspecified</pose>
+		
+		
+		<truncated>0</truncated>
+		
+		
+		<difficult>0</difficult>
+		
+		
+		<bndbox>
+			
+			
+			<xmin>0</xmin>
+			
+			
+			<ymin>319</ymin>
+			
+			
+			<xmax>26</xmax>
+			
+			
+			<ymax>359</ymax>
+			
+		
+		</bndbox>
+		
+	
+	</object>
+</annotation>

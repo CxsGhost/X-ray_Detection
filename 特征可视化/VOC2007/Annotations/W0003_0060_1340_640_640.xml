@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotation>
+	<folder>W0003</folder>
+	<filename>W0003_0060.png</filename>
+	<source>
+		
+		
+		<database>Unknown</database>
+		
+	
+	</source>
+	<size>
+		
+		
+		<width>640</width>
+		
+		
+		<height>640</height>
+		
+		
+		<depth>1</depth>
+		
+	
+	</size>
+	<segmented>0</segmented>
+	<object>
+		
+		
+		<name>气孔</name>
+		
+		
+		<pose>Unspecified</pose>
+		
+		
+		<truncated>0</truncated>
+		
+		
+		<difficult>0</difficult>
+		
+		
+		<bndbox>
+			
+			
+			<xmin>604</xmin>
+			
+			
+			<ymin>358</ymin>
+			
+			
+			<xmax>1340</xmax>
+			
+			
+			<ymax>391</ymax>
+			
+		
+		</bndbox>
+		
+	
+	</object>
+	<object>
+		
+		
+		<name>气孔</name>
+		
+		
+		<pose>Unspecified</pose>
+		
+		
+		<truncated>0</truncated>
+		
+		
+		<difficult>0</difficult>
+		
+		
+		<bndbox>
+			
+			
+			<xmin>459</xmin>
+			
+			
+			<ymin>369</ymin>
+			
+			
+			<xmax>485</xmax>
+			
+			
+			<ymax>401</ymax>
+			
+		
+		</bndbox>
+		
+	
+	</object>
+</annotation>

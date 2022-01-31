@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotation>
+	<folder>W0003</folder>
+	<filename>W0003_0056.png</filename>
+	<source>
+		
+		
+		<database>Unknown</database>
+		
+	
+	</source>
+	<size>
+		
+		
+		<width>640</width>
+		
+		
+		<height>640</height>
+		
+		
+		<depth>1</depth>
+		
+	
+	</size>
+	<segmented>0</segmented>
+	<object>
+		
+		
+		<name>气孔</name>
+		
+		
+		<pose>Unspecified</pose>
+		
+		
+		<truncated>0</truncated>
+		
+		
+		<difficult>0</difficult>
+		
+		
+		<bndbox>
+			
+			
+			<xmin>6</xmin>
+			
+			
+			<ymin>297</ymin>
+			
+			
+			<xmax>109</xmax>
+			
+			
+			<ymax>411</ymax>
+			
+		
+		</bndbox>
+		
+	
+	</object>
+	<object>
+		
+		
+		<name>气孔</name>
+		
+		
+		<pose>Unspecified</pose>
+		
+		
+		<truncated>0</truncated>
+		
+		
+		<difficult>0</difficult>
+		
+		
+		<bndbox>
+			
+			
+			<xmin>293</xmin>
+			
+			
+			<ymin>98</ymin>
+			
+			
+			<xmax>375</xmax>
+			
+			
+			<ymax>223</ymax>
+			
+		
+		</bndbox>
+		
+	
+	</object>
+	<object>
+		
+		
+		<name>气孔</name>
+		
+		
+		<pose>Unspecified</pose>
+		
+		
+		<truncated>0</truncated>
+		
+		
+		<difficult>0</difficult>
+		
+		
+		<bndbox>
+			
+			
+			<xmin>450</xmin>
+			
+			
+			<ymin>285</ymin>
+			
+			
+			<xmax>485</xmax>
+			
+			
+			<ymax>311</ymax>
+			
+		
+		</bndbox>
+		
+	
+	</object>
+	<object>
+		
+		
+		<name>气孔</name>
+		
+		
+		<pose>Unspecified</pose>
+		
+		
+		<truncated>0</truncated>
+		
+		
+		<difficult>0</difficult>
+		
+		
+		<bndbox>
+			
+			
+			<xmin>288</xmin>
+			
+			
+			<ymin>341</ymin>
+			
+			
+			<xmax>383</xmax>
+			
+			
+			<ymax>418</ymax>
+			
+		
+		</bndbox>
+		
+	
+	</object>
+</annotation>
