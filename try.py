@@ -2,17 +2,22 @@
 workdataDF.createOrReplaceTempView( "workdata")
 callrecordDF.createOrReplaceTempView( "calldata")
 
-val breakdownArea = spark.sql("select province , address, fault_1, fault_2, fault_type, acs_way, count(*) as num from workdata group by province, address, fault_1, fault_2, fault_type, acs_way")
+val breakdownArea = spark.sql("CREATE TABLE faultarea AS SELECT province ,city ,address ,fault_1 ,fault_2 ,fault_type ,acs_way ,COUNT(*) AS num FROM workdata  GROUP BY province,city,address,fault_1,fault_2,fault_type,acs_way")
+val servicePerformance = spark.sql("CREATE TABLE efficiency AS SELECT total.province ,CONCAT(total.date,'-01') AS date ,COUNT(*) AS num ,COUNT(DISTINCT total.exp_empid) AS exp_num ,COUNT(*)/COUNT(DISTINCT total.exp_empid) AS effic FROM( SELECT province ,SUBSTR(date,1,7) AS date ,exp_empid FROM workdata ) AS total GROUP BY total.province,total.date ORDER BY total.province,total.date DESC")
 
-val servicePerformance = spark.sql("select total.province, concat(total.date, '-01') as date , count(*) as num, count (distinct total.exp_empid) as exp_num, count(*) / count(distinct total.exp_empid) as effic from ( select province, substr(date, 1, 7) as date , exp_empid, from workdata) as total group by total.province, total.date order by total.province, total.date desc ")
+workdataDF.coalesce(1).write.csv("wd")
+
 
 import org.apache.spark.SparkConf
 import org.apache.spark.ml.linalg.Vectors
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.ml.clustering.KMeans
-case class detail(features: org.apache.spark.ml.linalg.Vector)
-case class callrecordClass(calling:String,called:String,call_type:String,start_time:String)
-case class workdataClass(province:String, city:String,code:String,acc_number:String, tel:String, date:String,rep_disoe:Int,overtime:Int, receipt:Int,descr:String,exp_empid:String,fault_1:String,fault_2:String,fault_type:String, acs_way:String,address:String)
+case class callrecordClass(province:String, address:String, fault_1:String, fault_2:String, fault_type:String, acs_way:String, num:String)
+case class workdataClass(province:String, date:String, num:String, exp_num:String, effic:String)
 import spark.implicits._
-val callrecordDF = spark.sparkContext.textFile("/data/callrecord.txt").map(_.split("\t")).map(arr=>callrecordClass(arr(1),arr(2), arr(3), arr(4))).toDF()
-val workdataDF = spark.sparkContext.textFile("/data/workdata.txt").map(_.split("\t")).map(arr => workdataClass(arr(1), arr(2), arr(3), arr(4), arr(5), arr(6), arr(7).toInt, arr(8).toInt, arr(9).toInt, arr(10), arr(11), arr(12), arr(13), arr(14), arr(15), arr(16))).toDF()
+val BreakDownArea = spark.sparkContext.textFile("/data/bda.csv").map(_.split(",")).map(arr=>callrecordClass(arr(1) ,arr(2), arr(3), arr(4), arr(5), arr(6), arr(7))).toDF()
+val ServicePerformance = spark.sparkContext.textFile("/data/nengxioa.csv").map(_.split(",")).map(arr => workdataClass(arr(1), arr(2), arr(4), arr(5), arr(6))).toDF()
+
+
+write.format("jbdc").option("url", "jdbc:mysql://120.46.150.60:3306/anli31?useSSL=false").option("dbtable", "anli31.breakdownarea").option("@Xgl0626").save()
+write.format("jbdc").option("url", "jdbc:mysql://120.46.150.60:3306/anli31?useSSL=false").option("dbtable", "anli31.serviceperformance").option("@Xgl0626").save()
